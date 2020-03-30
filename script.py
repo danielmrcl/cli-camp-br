@@ -8,16 +8,8 @@ def colocacao(inicio, fim): # função que retorna a colocação
     for c in range(inicio, fim):
         print(f"{c+1}º\t{camp_bras_class[c]}")
 # inicio
-print("""
-Campeonato Brasileiro de Futebol [15:46 13/03/2020]
-Escolha uma das opções abaixo:
-[1] listar os times em ordem alfabética
-[2] todas as 20 colocações
-[3] saber a posição de um time específico
-[4] apenas os 4 últimos colocados
-[5] apenas as 5 primeiras colocações
-[0] SAIR
-""")
+info = open("info")
+print(info.read())
 opc_usr = int(input("[0 a 5] >>> "))
 if opc_usr == 1: # listar os times em ordem alfabética
     for c in range(0, 20):
